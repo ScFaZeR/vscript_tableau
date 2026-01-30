@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VScript Tableau - Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-mode">
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-clipboard-list"></i>
+                    <span>VScript Tableau</span>
+                    <span class="version">v1.1.0</span>
+                </div>
+                <div class="header-controls">
+                    <button id="langToggle" class="control-btn" title="Switch Language">
+                        <img src="https://flagcdn.com/w40/fr.png" alt="Français" id="flagIcon">
+                    </button>
+                    <button id="themeToggle" class="control-btn" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 data-en="Complete Documentation" data-fr="Documentation Complète">Documentation Complète</h1>
+            <p class="subtitle" data-en="The ultimate investigation board script for FiveM"
+                data-fr="Le script ultime de tableau d'investigation pour FiveM">
+                Le script ultime de tableau d'investigation pour FiveM
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Installation -->
+        <section class="doc-section">
+            <h2><i class="fas fa-download"></i> <span data-en="Installation" data-fr="Installation">Installation</span>
+            </h2>
+            <div class="content-block">
+                <ol data-en="
+                    <li>Download vscript_tableau</li>
+                    <li>Drag the folder into your server's resources directory</li>
+                    <li>Add ensure vscript_tableau to your server.cfg</li>
+                    <li>Restart your server</li>
+                " data-fr="
+                    <li>Téléchargez vscript_tableau</li>
+                    <li>Glissez le dossier dans le répertoire resources de votre serveur</li>
+                    <li>Ajoutez ensure vscript_tableau à votre server.cfg</li>
+                    <li>Redémarrez votre serveur</li>
+                ">
+                    <li>Téléchargez vscript_tableau</li>
+                    <li>Glissez le dossier dans le répertoire resources de votre serveur</li>
+                    <li>Ajoutez ensure vscript_tableau à votre server.cfg</li>
+                    <li>Redémarrez votre serveur</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="doc-section">
+            <h2><i class="fas fa-star"></i> <span data-en="Features" data-fr="Fonctionnalités">Fonctionnalités</span>
+            </h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-database"></i>
+                    <h3 data-en="Hybrid Storage" data-fr="Stockage Hybride">Stockage Hybride</h3>
+                    <p data-en="Choose between KVP (native) or SQL (MySQL)"
+                        data-fr="Choix entre KVP (natif) ou SQL (MySQL)">
+                        Choix entre KVP (natif) ou SQL (MySQL)
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-tv"></i>
+                    <h3 data-en="3D DUI Rendering" data-fr="Rendu DUI 3D">Rendu DUI 3D</h3>
+                    <p data-en="Content visible directly on the prop in-game"
+                        data-fr="Contenu visible directement sur le prop en jeu">
+                        Contenu visible directement sur le prop en jeu
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h3 data-en="Smooth Placement" data-fr="Placement Fluide">Placement Fluide</h3>
+                    <p data-en="Adjustable speed + Shift Boost" data-fr="Vitesse ajustable + Boost avec Shift">
+                        Vitesse ajustable + Boost avec Shift
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-server"></i>
+                    <h3 data-en="Multi-Framework" data-fr="Multi-Framework">Multi-Framework</h3>
+                    <p data-en="ESX, QB, Qbox & Standalone support" data-fr="Support ESX, QB, Qbox & Standalone">
+                        Support ESX, QB, Qbox & Standalone
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Configuration -->
+        <section class="doc-section">
+            <h2><i class="fas fa-cog"></i> <span data-en="Configuration" data-fr="Configuration">Configuration</span>
+            </h2>
+
+            <!-- Debug and General -->
+            <div class="config-block">
+                <h3 data-en="General Settings" data-fr="Paramètres Généraux">Paramètres Généraux</h3>
+                <div class="code-block">
+                    <pre>Config.Debug = false        -- Console spam? No thanks
+Config.Locale = 'fr'        -- fr, en, es, de, etc.
+Config.Inventory = 'auto'   -- auto, ox, qs, ps, core, esx, qb</pre>
+                </div>
+            </div>
+
+            <!-- Placement Speed -->
+            <div class="config-block">
+                <h3 data-en="Placement Speed" data-fr="Vitesse de Placement">Vitesse de Placement</h3>
+                <div class="code-block">
+                    <pre>Config.PlacementSpeed = {
+    Rotation = 1.0,         -- Base rotation speed
+    Movement = 0.01,        -- Base movement speed
+    ShiftMultiplier = 5.0   -- Speed multiplier holding Shift
+}</pre>
+                </div>
+                <p data-en="Adjust how fast the board moves when placing/editing position."
+                    data-fr="Ajustez la vitesse de déplacement lors du placement du tableau.">
+                    Ajustez la vitesse de déplacement lors du placement du tableau.
+                </p>
+            </div>
+
+            <!-- Item Setup -->
+            <div class="config-block">
+                <h3 data-en="Item Setup" data-fr="Configuration des Items">Configuration des Items</h3>
+                <p data-en="Code snippets to add the required item to your server."
+                    data-fr="Codes à ajouter pour créer l'item requis sur votre serveur.">
+                    Codes à ajouter pour créer l'item requis sur votre serveur.
+                </p>
+
+                <!-- Ox Inventory -->
+                <strong>Ox Inventory (data/items.lua)</strong>
+                <div class="code-block">
+                    <pre>['item_tableau'] = {
+    label = 'Tableau d\'enquête',
+    weight = 1000,
+    stack = false,
+    close = true,
+    description = 'Un tableau en liège pour vos investigations.',
+    client = {
+        usetime = 2500,
+        export = 'vscript_tableau.placeBoard'
+    }
+},</pre>
+                </div>
+
+                <!-- QB/Qbox -->
+                <strong>QB / Qbox (shared/items.lua)</strong>
+                <div class="code-block">
+                    <pre>['item_tableau'] = {
+    ['name'] = 'item_tableau',
+    ['label'] = 'Tableau d\'enquête',
+    ['weight'] = 1000,
+    ['type'] = 'item',
+    ['image'] = 'item_tableau.png',
+    ['unique'] = true,
+    ['useable'] = true,
+    ['shouldClose'] = true,
+    ['combinable'] = nil,
+    ['description'] = 'Un tableau en liège pour vos investigations.'
+},</pre>
+                </div>
+
+                <!-- SQL -->
+                <strong>ESX (SQL)</strong>
+                <div class="code-block">
+                    <pre>INSERT INTO `items` (`name`, `label`, `weight`) VALUES
+('item_tableau', 'Tableau d\'enquête', 1);</pre>
+                </div>
+            </div>
+
+            <!-- Customization Info -->
+            <div class="config-block">
+                <h3 data-en="Advanced Customization" data-fr="Customisation Avancée">Customisation Avancée</h3>
+
+                <h4 style="color: var(--accent); margin-top: 15px;">1. Stockage (KVP vs SQL)</h4>
+                <p data-en="By default, the script uses KVP (native). To use SQL:"
+                    data-fr="Par défaut, le script utilise KVP (natif). Pour utiliser SQL :">
+                    Par défaut, le script utilise KVP (natif). Pour utiliser SQL :
+                </p>
+                <div class="code-block">
+                    <pre>-- 1. Ouvrez customization/storage.lua
+-- 2. Commentez la section "KVP Implementation"
+-- 3. Décommentez la section "SQL Implementation"
+-- 4. Importez le fichier vscript_tableau.sql dans votre base de données</pre>
+                </div>
+
+                <h4 style="color: var(--accent); margin-top: 15px;">2. Custom Inventory</h4>
+                <p data-en="If you use a custom inventory system, edit customization/inventory.lua."
+                    data-fr="Si vous utilisez un inventaire personnalisé, modifiez customization/inventory.lua.">
+                    Si vous utilisez un inventaire personnalisé, modifiez <code>customization/inventory.lua</code>.
+                </p>
+            </div>
+
+            <!-- Developers -->
+            <div class="config-block">
+                <h3 data-en="Developers & Exports" data-fr="Développeurs & Exports">Développeurs & Exports</h3>
+                <p data-en="Server-side event to give a pre-filled board."
+                    data-fr="Event côté serveur pour donner un tableau pré-rempli.">
+                    Event côté serveur pour donner un tableau pré-rempli.
+                </p>
+                <div class="code-block">
+                    <pre>-- Give a board with specific data
+TriggerEvent('vscript_tableau:giveItem', 'item_tableau', 1, {
+    items = {}, -- Array of items
+    lines = {}  -- Array of lines
+})</pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usage -->
+        <section class="doc-section">
+            <h2><i class="fas fa-gamepad"></i> <span data-en="How to Use" data-fr="Utilisation">Utilisation</span></h2>
+            <div class="usage-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4 data-en="Place the Board" data-fr="Poser le Tableau">Poser le Tableau</h4>
+                        <p data-en="Use the 'item_tableau' to enter placement mode. Use arrows to move, Shift to speed up."
+                            data-fr="Utilisez 'item_tableau' pour passer en mode placement. Flèches pour bouger, Shift pour accélérer.">
+                            Utilisez "item_tableau" pour passer en mode placement. Flèches pour bouger, Shift pour
+                            accélérer.
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4 data-en="Add Content" data-fr="Ajouter du Contenu">Ajouter du Contenu</h4>
+                        <p data-en="Target (Alt) the board to open UI. Double click to add notes/photos."
+                            data-fr="Faites l'oeil (Alt) sur le tableau pour ouvrir l'UI. Double clic pour ajouter notes/photos.">
+                            Faites l'oeil (Alt) sur le tableau pour ouvrir l'UI. Double clic pour ajouter notes/photos.
+                        </p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4 data-en="Link Clues" data-fr="Lier les Indices">Lier les Indices</h4>
+                        <p data-en="Click the red dots on items to create visual links (red threads) between them."
+                            data-fr="Cliquez sur les points rouges des items pour créer des liens visuels (fils rouges) entre eux.">
+                            Cliquez sur les points rouges des items pour créer des liens visuels (fils rouges) entre
+                            eux.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Troubleshooting -->
+        <section class="doc-section">
+            <h2><i class="fas fa-wrench"></i> <span data-en="Troubleshooting" data-fr="Dépannage">Dépannage</span></h2>
+            <div class="faq">
+                <div class="faq-item">
+                    <h4 data-en="I can't see the board content" data-fr="Je ne vois pas le contenu du tableau">Je ne
+                        vois pas le contenu du tableau</h4>
+                    <p data-en="
+                        • Check your graphics settings (Texture Budget)
+                        • Ensure Config.RenderDistance is high enough
+                        • Restart the resource (DUI sometimes fails on reload)
+                    " data-fr="
+                        • Vérifiez vos graphismes (Budget Texture)
+                        • Vérifiez que Config.RenderDistance est assez élevé
+                        • Relancez la ressource (le DUI peut planter au restart)
+                    ">
+                        • Vérifiez vos graphismes (Budget Texture)
+                        • Vérifiez que <code>Config.RenderDistance</code> est assez élevé
+                        • Relancez la ressource (le DUI peut planter au restart)
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-en="Board is not saving" data-fr="Le tableau ne sauvegarde pas">Le tableau ne sauvegarde
+                        pas</h4>
+                    <p data-en="
+                        • KVP: Check server console for errors
+                        • SQL: Ensure table 'vscript_tableau' exists and connection is good
+                    " data-fr="
+                        • KVP : Vérifiez la console serveur (erreurs ?)
+                        • SQL : Vérifiez que la table 'vscript_tableau' existe
+                    ">
+                        • KVP : Vérifiez la console serveur (erreurs ?)
+                        • SQL : Vérifiez que la table <code>vscript_tableau</code> existe
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support -->
+        <section class="doc-section">
+            <h2><i class="fas fa-life-ring"></i> <span data-en="Support" data-fr="Support">Support</span></h2>
+            <div class="content-block">
+                <p data-en="Need help? Join the Discord." data-fr="Besoin d'aide ? Rejoignez le Discord.">
+                    Besoin d'aide ? Rejoignez le Discord.
+                </p>
+                <div class="support-links">
+                    <a href="https://discord.gg/MsguHxUfGX" class="support-btn discord">
+                        <i class="fab fa-discord"></i>
+                        <span data-en="Join Discord" data-fr="Rejoindre Discord">Rejoindre Discord</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 VScript. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
