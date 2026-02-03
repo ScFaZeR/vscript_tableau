@@ -148,23 +148,61 @@ Config.Inventory = 'auto'   -- auto, ox, qs, ps, core, esx, qb</pre>
                 <!-- Ox Inventory -->
                 <strong>Ox Inventory (data/items.lua)</strong>
                 <div class="code-block">
-                    <pre>['item_tableau'] = {
+                    <pre>['photo'] = {
+    label = 'Photo',
+    weight = 10,
+    stack = true,
+    close = true,
+    description = 'Une photo imprimée.'
+},
+
+['stylo'] = {
+    label = 'Stylo',
+    weight = 50,
+    stack = true,
+    close = true,
+    description = 'Pour écrire des notes.'
+},
+
+['item_tableau'] = {
     label = 'Tableau d\'enquête',
     weight = 1000,
     stack = false,
     close = true,
-    description = 'Un tableau en liège pour vos investigations.',
-    client = {
-        usetime = 2500,
-        export = 'vscript_tableau.placeBoard'
-    }
+    description = 'Un tableau en liège pour vos enquêtes.'
 },</pre>
                 </div>
 
                 <!-- QB/Qbox -->
                 <strong>QB / Qbox (shared/items.lua)</strong>
                 <div class="code-block">
-                    <pre>['item_tableau'] = {
+                    <pre>['photo'] = {
+    ['name'] = 'photo',
+    ['label'] = 'Photo',
+    ['weight'] = 10,
+    ['type'] = 'item',
+    ['image'] = 'photo.png',
+    ['unique'] = false,
+    ['useable'] = true,
+    ['shouldClose'] = true,
+    ['combinable'] = nil,
+    ['description'] = 'Une photo imprimée.'
+},
+
+['stylo'] = {
+    ['name'] = 'stylo',
+    ['label'] = 'Stylo',
+    ['weight'] = 50,
+    ['type'] = 'item',
+    ['image'] = 'stylo.png',
+    ['unique'] = false,
+    ['useable'] = true,
+    ['shouldClose'] = true,
+    ['combinable'] = nil,
+    ['description'] = 'Pour écrire des notes.'
+},
+
+['item_tableau'] = {
     ['name'] = 'item_tableau',
     ['label'] = 'Tableau d\'enquête',
     ['weight'] = 1000,
@@ -174,7 +212,7 @@ Config.Inventory = 'auto'   -- auto, ox, qs, ps, core, esx, qb</pre>
     ['useable'] = true,
     ['shouldClose'] = true,
     ['combinable'] = nil,
-    ['description'] = 'Un tableau en liège pour vos investigations.'
+    ['description'] = 'Un tableau en liège pour vos enquêtes.'
 },</pre>
                 </div>
 
@@ -182,6 +220,8 @@ Config.Inventory = 'auto'   -- auto, ox, qs, ps, core, esx, qb</pre>
                 <strong>ESX (SQL)</strong>
                 <div class="code-block">
                     <pre>INSERT INTO `items` (`name`, `label`, `weight`) VALUES
+('photo', 'Photo', 1),
+('stylo', 'Stylo', 1),
 ('item_tableau', 'Tableau d\'enquête', 1);</pre>
                 </div>
             </div>
